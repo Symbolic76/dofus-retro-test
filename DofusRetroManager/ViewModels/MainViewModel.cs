@@ -240,7 +240,8 @@ namespace DofusRetroManager.ViewModels
 
         private void ReorderCharacters()
         {
-            for (int i = 0; i < Characters.Count; i++)
+            int count = Characters.Count;
+            for (int i = 0; i < count; i++)
                 Characters[i].Order = i;
         }
 

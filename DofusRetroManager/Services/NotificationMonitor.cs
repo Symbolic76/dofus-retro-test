@@ -67,6 +67,8 @@ namespace DofusRetroManager.Services
         // ---- Events ----
         public event EventHandler<NotificationEventArgs>? NotificationDetected;
 
+        private const string TitleSeparator = " - ";
+
         // ---- Public API ----
 
         public void Configure(
@@ -149,7 +151,7 @@ namespace DofusRetroManager.Services
         /// </summary>
         private static string ExtractCharacterName(string title)
         {
-            var parts = title.Split(" - ", StringSplitOptions.RemoveEmptyEntries);
+            var parts = title.Split(TitleSeparator, StringSplitOptions.RemoveEmptyEntries);
             return parts.Length >= 2 ? parts[1].Trim() : string.Empty;
         }
     }

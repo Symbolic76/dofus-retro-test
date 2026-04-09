@@ -12,7 +12,7 @@ namespace DofusRetroManager.Services
         public IntPtr Handle { get; set; }
         public string Title { get; set; } = string.Empty;
         public string ProcessName { get; set; } = string.Empty;
-        public string HandleHex => $"0x{Handle.ToInt64():X8}";
+        public string HandleHex => $"0x{Handle.ToInt64():X16}";
     }
 
     public class NativeWindowManager
